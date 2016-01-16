@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQuery Study</title>
+		
+	</head>
+	<body>
+	<div>
+		<p id='p_tag'class='p_class'>以上两段代码完成的功能是一样的。由此可以看出，<strong>jQuery</strong>更加的简洁方便，我们在处理DOM时不必关心功能的实现细节。</p>
+		<span>就是jQuery中的函数</span>
+		<span>就是jQu</span>
+		<ul>
+			<li title="like">1<strong></strong></li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li style='display:none'>5</li>
+			<li style='display:none'>6</li>
+			<li style='display:none'>7</li>
+			<li>8</li>
+			<img src={%static "images/bg.jpg"%} alt=""></>
+			<a id='a_id' href="aaaaa">更多</a>
+			<div id="div_id"></div>
+		</ul>
+		<span>就是jQuery</span>
+	</div>
+		<button id="but_id">Change</button>
+		
+		<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+		<script>
+			
+			function change(){
+				$("#a_id").text("nicai")
+			}
+			function show(){
+				$("li[style='display:none']").show()
+			}
+			var i=1;
+			$("#but_id").bind("click", function(){
+					alert("aaaa")
+					$("#div_id").load("/blog/login/")
+				})
+				
+			$(document).ready(function(){
+			})
+		</script>
+	</body>				
+</html>
