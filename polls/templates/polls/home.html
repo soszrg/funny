@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+	</head>
+	
+	<body>
+		<span>{{str}}</span>
+		<ul>
+			{% for one in questions%}
+				<p>
+					<li><a href={% url 'polls:detail' question_id=one.id %}>{{one.question_text}}</a></li><span>-----{{one.pub_date}}</span>
+				</p>
+			{% endfor %}
+		</ul>
+	</body>
+</html>

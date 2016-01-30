@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'polls',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -69,6 +70,18 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+#     'django.contrib.auth.context_processors.auth',
+#     'django.core.context_processors.debug',
+#     'django.core.context_processors.i18n',
+#     'django.core.context_processors.media',
+#     'django.core.context_processors.static',
+#     'djblets.util.context_processors.siteRoot',
+#     'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+#     'seahub.base.context_processors.base',
+)
+
 WSGI_APPLICATION = 'funny.wsgi.application'
 
 
@@ -79,6 +92,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'secondDb':{
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': os.path.join(BASE_DIR, 'second.sqlite3'),
     }
 }
 
